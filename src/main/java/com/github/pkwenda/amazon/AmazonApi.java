@@ -49,6 +49,7 @@ public class AmazonApi implements API {
 	// process是定制爬虫逻辑的核心接口，在这里编写抽取逻辑
 	public void process(Page page) {
 		//todo:http://webmagic.io/docs/zh/posts/ch6-custom-componenet/scheduler.html 自定义 scheduler 不要去重
+		//https://github.com/code4craft/webmagic/issues/311
 		page.addTargetRequest(page.getUrl().toString() );
 		Html html = page.getHtml();
 		List<Html> productItems = html.$(PRODUCT_ITEM).all().stream().map(e -> new Html(e)).collect(Collectors.toList());
