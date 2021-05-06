@@ -20,4 +20,27 @@ public class Product {
 
 	private String date;
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getPrise() {
+		return prise;
+	}
+
+	public void setPrise(int prise) {
+		this.prise = prise;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
 }

@@ -38,9 +38,9 @@ public class IpProxy {
 	}
 
 	public static Proxy randomProxy(){
-		var ip_port = ip_address.split(":");
-		var ip = ip_port[0].split(",")[0];
-		var port = Integer.parseInt(ip_port[1]);
+		String[] ip_port = ip_address.split(":");
+		String ip = ip_port[0].split(",")[0];
+		Integer port = Integer.parseInt(ip_port[1]);
 		return new Proxy(Proxy.Type.HTTP, new InetSocketAddress(ip,port));
 	}
 
